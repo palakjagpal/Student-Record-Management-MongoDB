@@ -22,16 +22,20 @@ mongoose.connect(MONGO_URI).then(()=> {
 
 app.use("/api/student", myRoute)
 
+app.get("/", (req, res) => {
+    res.send("Student Record Management API with CRUD operations is running....")
+})
+
 app.listen(PORT, () => {
     console.log(`Server is running on port http://localhost:${PORT}`)
 })
 
 
-/*
-{
+/**
+ * {
     "name":"Palak Jagpal",
     "age":21,
     "email":"palak@gmail.com",
     "course":"MCA"
 }
-*/
+ */
